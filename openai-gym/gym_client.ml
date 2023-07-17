@@ -27,10 +27,10 @@ let base_url = ref "http://127.0.0.1:5000"
     environment (e.g., ["CartPole-v0"]). It returns the instance
     identifier.
 *)
-let env_create : string -> instance_id = begin
-  fun env_id ->
+let env_create : string -> string -> instance_id = begin
+  fun env_id mode ->
     let method_ = "/v1/envs/" in
-    let req = string_of_env_id { env_id = env_id; } in
+    let req = string_of_env_id { env_id = env_id; mode = mode } in
     let rsp = Rest.post !base_url method_ req in
     instance_id_of_string rsp
 end

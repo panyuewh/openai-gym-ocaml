@@ -27,6 +27,7 @@ type env_id = {
 
 type instance_id = {
   instance_id : string;
+  ~mode : string;
 }
 
 type envs = (string * string) list <json repr="object">
