@@ -19,7 +19,7 @@
  (libraries openai-gym)
  (link_flags -linkall))
 
-(alias
- (name   runtest)
+(rule
+ (alias   runtest)
  (deps   (:x tutorial.exe))
  (action (run %{x})))

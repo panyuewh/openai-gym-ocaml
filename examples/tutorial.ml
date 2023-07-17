@@ -4,7 +4,7 @@ open Gym_t
 
 (** Create a new environment to test an agent. *)
 let instance_id =
-  Gym_client.env_create "CartPole-v1"
+  Gym_client.env_create "CartPole-v1" "human"
 
 (** Initialize the environment. *)
 let init =
